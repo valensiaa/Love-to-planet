@@ -1,0 +1,473 @@
+$color-matrix: #FF0000;
+$color-games: #FF7F00;
+$color-yoga: #F6EC13;
+$color-aboutus: #68bd45;
+$color-shop: #3a53a4;
+$color-calendar: #4B0082;
+$color-other: #9400D3;
+$color-white: #fff;
+$color-text: #333333;
+$color-logo: #3953a4;
+
+$font-decor: 'Segoe Print';
+$font-main: 'HelveticaNeueCyr';
+body {
+	margin: 0 auto;
+	position: relative;
+}
+* {
+	color: $color-text;
+	font-family: $font-decor;
+}
+a {
+	color: $color-text;
+}
+#left-block {
+	width: 20%;
+	background-color: $color-white;
+	float: left;
+	position: fixed;
+    height: 100%;
+    box-shadow: 0px 0px 10px 1px #000000;
+}
+#content {
+	width: 80%;
+	float: right;
+	background-color: red;
+	min-height: 1000px;
+}
+.wrapper {
+	width: 100%;
+	min-width: 1000px;
+	margin: 0 auto;
+}
+.clean {
+	clear: both;
+}
+.nav {
+	text-align: center;	
+}
+.nav-item:not(:nth-child(2)) {
+	min-height: 40px;
+	line-height: 237%;
+}
+.nav-item {
+	border-bottom: 1px solid;
+	margin: 0 14%;
+}
+.nav-item:nth-child(1) {
+	border-bottom-color: $color-matrix;
+}
+.nav .nav-item:nth-child(1):hover .nav-link {
+	color: $color-matrix;
+}
+.nav .nav-item:nth-child(2):hover .nav-link {
+	color: $color-games;
+}
+.nav .nav-item:nth-child(3):hover .nav-link {
+	color: $color-yoga;
+}
+.nav .nav-item:nth-child(4):hover .nav-link {
+	color: $color-aboutus;
+}
+.nav .nav-item:nth-child(5):hover .nav-link {
+	color: $color-shop;
+}
+.nav .nav-item:nth-child(6):hover .nav-link {
+	color: $color-calendar;
+}
+.nav-item:nth-child(2)  {
+	border-bottom-color: $color-games;
+}
+.nav-item:nth-child(3) {
+	border-bottom-color: $color-yoga;
+}
+.nav-item:nth-child(4) {
+	border-bottom-color: $color-aboutus;
+}
+.nav-item:nth-child(5) {
+	border-bottom-color: $color-shop;
+}
+.nav-item:nth-child(6) {
+	border-bottom-color: $color-calendar;
+}
+.logo {
+	background: url(../img/logo.png) no-repeat;
+	-webkit-background-size: 34%;
+	background-size: 34%;
+	height: 85px;
+	width: 100%;
+	margin: 5px 0 20px 5px;
+}
+.logo span {
+	width: 60%;
+	float: right;
+	font-size: 20pt;
+	color: #3953a4;
+	font-weight: bolder;
+	line-height: 20pt;
+	margin: 15px auto;
+}
+.fix-top {
+	width: 100%;
+	background-color: $color-white;
+	box-shadow: 12px 0px 10px 1px #000000;
+	height: 5px;
+	position: fixed;
+}
+.bunner1 {
+	background: url(../img/fon1.png) 0 -350% no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 500px;
+	background-attachment: fixed;
+
+}
+.wave {
+	position: relative;
+	top: -75px;
+}
+.wave svg {
+	width: 100%;
+}
+.st0 {
+	fill:#FFFFFF;
+}
+.matrix-block, .game-block, .yoga-block, .shop-block {
+	background-color: $color-white;
+	position: relative;
+}
+#left-block, .fix-top {
+	z-index: 999;
+}
+.game-block span {
+	padding-top: 25px;
+}
+.block-header {
+	font-size: 20pt;
+	margin-bottom: 20px;
+	display: block;
+	text-align: center;
+	
+}
+.matrix-block span {
+	@extend .block-header;
+	color: $color-matrix;
+	margin-top: -65px;
+}
+.game-block span {
+	@extend .block-header;
+	color: $color-games;
+}
+.yoga-block span {
+	@extend .block-header;
+	color: $color-yoga;
+}
+.aboutus-block span {
+	@extend .block-header;
+	color: $color-aboutus;
+}
+.shop-block span {
+	@extend .block-header;
+	color: $color-shop;
+}
+.matrix-block p, .game-block p, .yoga-block p, .shop-block p  {
+	margin: 0 5% 23px;
+	text-align: center;
+	font-family: $font-main;
+}
+.btn-primary {
+	color: $color-text;
+	background-color: $color-white;
+	border-color: #e1e1e1;
+	margin: 28px 38%;
+	display: block;
+	border-radius: 0px;
+}
+.bgc-btn {
+	background-color: $color-white;
+}
+.outline-btn {
+	outline: none;
+}
+.btn-matrix:hover {
+	color:$color-matrix;
+	border-color: $color-matrix;
+	@extend .bgc-btn;
+}
+.btn-game:hover {
+	color:$color-games;
+	border-color: $color-games;
+	@extend .bgc-btn;
+}		
+.btn-matrix:focus {
+	color:$color-matrix;
+	border-color: $color-matrix;
+	@extend .bgc-btn;
+	@extend .outline-btn;
+}
+.btn-game:focus {
+	color:$color-games;
+	border-color: $color-games;
+	@extend .bgc-btn;
+	@extend .outline-btn;
+}
+.btn-yoga:hover {
+	color:$color-yoga;
+	border-color: $color-yoga;
+	@extend .bgc-btn;
+}	
+.btn-yoga:focus {
+	color:$color-yoga;
+	border-color: $color-yoga;
+	@extend .bgc-btn;
+	@extend .outline-btn;
+}
+.btn-shop:hover {
+	color:$color-shop;
+	border-color: $color-shop;
+	@extend .bgc-btn;
+}	
+.btn-shop:focus {
+	color:$color-shop;
+	border-color: $color-shop;
+	@extend .bgc-btn;
+	@extend .outline-btn;
+}
+.matrix-road {
+	background: url(../img/matrix.png) 0 -154px no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 80%;
+	height: 512px;
+	margin: 0 auto;
+}
+.matrix-path {
+	background: url(../img/matrix-path.png) 50% no-repeat;
+	-webkit-background-size: 90%;
+	background-size: 90%;
+	width: 90%;
+	height: 20px;
+	margin: 32px auto 0;
+}
+.game {
+	background: url(../img/game.png) 50% no-repeat;
+	-webkit-background-size: 90%;
+	background-size: 90%;
+	width: 100%;
+	height: 283px;
+	margin: -35px auto;
+}
+.game-path {
+	background: url(../img/game-path.png) 50% 9% no-repeat;
+	-webkit-background-size: 90%;
+	background-size: 90%;
+	width: 100%;
+	height: 190px;
+	margin: -87px auto;
+	box-shadow: 0px 11px 6px -7px #231F1F;
+}
+/*.wave2 {
+	position: relative;
+	top: -90px;
+	z-index: 1
+}*/
+.bunner2 {
+	width: 100%;
+	background: url(../img/fon2.jpg) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 800px;
+	background-attachment: fixed;
+}
+.wave3 {
+	position: relative;
+	top: -75px;
+}
+.wave4 {
+	position: relative;
+	top: 44px;
+	left: 1px;
+}
+.yoga-block span {
+	margin-top: -60px;
+}
+.yoga-path {
+	background: url(../img/yoga-path.png)  50% 50% no-repeat;
+	width: 100%;
+	height: 54px;
+	-webkit-background-size: 90%;
+	background-size: 90%;
+	margin: 0 auto;
+}
+.youtube-video {
+	text-align: center;
+}
+.bunner3 {
+	width: 100%;
+	background: url(../img/fon3.png) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 750px;
+	background-attachment: fixed;
+}
+.aboutus-block {
+	width: 100%;
+	height: 300px;
+	background-color: rgba(255,255,255, .8);
+	position: relative;
+	top: 32%;
+}
+.aboutus-block p {
+	font-family: $font-main;
+	font-size: 16pt;
+	font-style: italic;
+	text-align: center;
+	margin: 0 10%;
+}
+.aboutus-block span {
+	padding-top: 15px;
+}
+.greenleft {
+	background: url(../img/greenleft-abus.png) 50% no-repeat;
+	height: 88%;
+	width: 5%;
+	position: absolute;
+	top: 16px;
+	background-size: contain;
+	left: 21px;
+}
+.greenright {
+	background: url(../img/greenright-abus.png) 50% no-repeat;
+	height: 88%;
+	width: 5%;
+	background-size: contain;
+	right: 21px;
+	position: absolute;
+	top: 16px;
+}
+.shop-block {
+	box-shadow: -11px -18px 7px -15px #231F1F;
+}
+.shop-block span {
+	margin-bottom: 0px;
+	line-height: 50pt;
+}
+.carousel {
+	height: 250px;
+	margin: 0 2%;
+	background-color: $color-white;
+	box-shadow: 0px 7px 14px -10px $color-shop;
+}
+.carousel-control .icon-prev::before {
+	content: url(../img/left-arrow.png);
+}
+.carousel-control .icon-next::before {
+	content: url(../img/right-arrow.png);
+}
+.carousel-item {
+	height: 246px;
+}
+.carousel-item div {
+	width: calc(25% - 4px);
+	margin: 2px;
+	float: left;
+	height: 246px;
+}
+.carousel-control.left {
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: linear-gradient(to right,rgba(58, 83, 164, 0.5) 0,rgba(155, 40, 40, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x; 
+}
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: linear-gradient(to right,rgba(155, 40, 40, 0) 0,rgba(58, 83, 164, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+    }
+#product1 {
+	background: url(../img/product1.jpg) no-repeat;
+	-ms-background-position-x: 50%;
+	background-position-x: 50%;
+	-ms-background-position-y: 50%;
+	background-position-y: 50%;
+	background-color: $color-white;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+#product2 {
+	background: url(../img/product2.jpg) 50% 50% $color-white no-repeat;
+	-ms-background-position-x: 50%;
+	background-position-x: 50%;
+	-ms-background-position-y: 50%;
+	background-position-y: 50%;
+	background-color: $color-white;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+#product3 {
+	background: url(../img/product3.jpg) 50% 50% $color-white no-repeat;
+	-ms-background-position-x: 50%;
+	background-position-x: 50%;
+	-ms-background-position-y: 50%;
+	background-position-y: 50%;
+	background-color: $color-white;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+#product4 {
+	background: url(../img/product4.jpg) 50% 50% $color-white no-repeat;
+	-ms-background-position-x: 50%;
+	background-position-x: 50%;
+	-ms-background-position-y: 50%;
+	background-position-y: 50%;
+	background-color: $color-white;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.shop-path {
+	background: url(../img/shop-path.png) 50% no-repeat;
+	-webkit-background-size: 34%;
+	background-size: 34%;
+	width: 100%;
+	height: 20px;
+	margin: -20px auto 28px;
+}
+footer {
+	background-color: $color-white;
+	width: 100%;
+}
+.logo-footer {
+	background: url(../img/logo.png) no-repeat;
+	margin: -28px 0%;
+	width: 24%;
+	height: 60px;
+	-webkit-background-size: 17%;
+	background-size: 17%;
+	background-position-y: 50%;
+	background-position-x: 100%;
+}
+
+small {
+	width: 100%;
+	display: block;
+	text-align: center;
+	line-height: 0;
+	font-family: $font-main;
+}
+.calendar {
+	margin: 16px 4%;
+}
+.hidden-animation {
+	opacity:0;
+}
+.visible-animation {
+	opacity:1;
+}
