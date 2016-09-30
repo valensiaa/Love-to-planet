@@ -55,8 +55,8 @@ a {
 	border-bottom: 1px solid;
 	margin: 0 14%;
 }
-.nav-item:nth-child(1) {
-	border-bottom-color: $color-matrix;
+.nav-link:focus {
+	outline: none;
 }
 .nav .nav-item:nth-child(1):hover .nav-link {
 	color: $color-matrix;
@@ -75,6 +75,9 @@ a {
 }
 .nav .nav-item:nth-child(6):hover .nav-link {
 	color: $color-calendar;
+}
+.nav-item:nth-child(1) {
+	border-bottom-color: $color-matrix;
 }
 .nav-item:nth-child(2)  {
 	border-bottom-color: $color-games;

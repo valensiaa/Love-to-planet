@@ -2,6 +2,7 @@
 //     var position = s.getBoundingClientRect();
 //     console.log(position);
 // }
+$(document).ready(function() {
     $('.btn-matrix').mousedown(function () {
         $(this).css('backgroundColor', '#FFF');
         $(this).css('color', '#FF0000');
@@ -30,8 +31,8 @@
         $(this).css('outline', 'none');
     });
     
-$(document).ready(function() {
-    $('.game, .game-path').addClass("hidden-animation").viewportChecker({
+
+    $('.game, .game-path, .greenleft').addClass("hidden-animation").viewportChecker({
     classToAdd: 'visible-animation animated slideInLeft',
     offset: 100
     });
@@ -39,7 +40,22 @@ $(document).ready(function() {
     classToAdd: 'visible-animation animated zoomInRight',
     offset: 100
     });
-
+    $('.yoga-path').addClass("hidden-animation").viewportChecker({
+    classToAdd: 'visible-animation animated zoomIn',
+    offset: 100
+    });
+    $('.greenright').addClass("hidden-animation").viewportChecker({
+    classToAdd: 'visible-animation animated slideInRight',
+    offset: 100
+    });
+    $('.aboutus-p').addClass("hidden-animation").viewportChecker({
+    classToAdd: 'visible-animation animated flipInX',
+    offset: 100
+    });
+    $('.header').addClass("hidden-animation").viewportChecker({
+    classToAdd: 'visible-animation animated fadeInRight',
+    offset: 100
+    });
 
 
 
