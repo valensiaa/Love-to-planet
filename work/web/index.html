@@ -6,7 +6,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>lovetoplanet</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/animate.css" />
@@ -14,15 +15,13 @@
 	<link rel='stylesheet' media='(max-width: 767px) and (min-width: 480px)' href='middle_style.css' />
 	<link rel='stylesheet' media='(max-width: 479px)' href='little_style.css' />
 
-	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-	<script src="script/jquery.viewportchecker.min.js"></script>
-	<script src="script/script.js"></script>	
-
+	
 
 </head>
 <body>
+<div class="wrapper">
 	<div id="left-block">
-		<div class="logo">
+		<div id="logo">
 			<span>Любовь <br/>
 			планете</span>
 		</div>
@@ -52,7 +51,7 @@
 		</div>
 	</div>
 	<div id="content" >
-		<div class="wrapper">
+		
 			<div class="fix-top"></div>
 			<div class=bunner1></div>
 
@@ -66,7 +65,7 @@
 					<span class="header">Матрица судьбы</span>
 					<p class="aboutus-p">Что такое «Матрица Судьбы»? А что такое судьба? Виктор Владимирович Онищенко предлагает посмотреть на нашу судьбу как на систему или совокупность базовых направлений, в которых в течение жизни реализовывает себя почти каждый человек. Насколько мы гармонично проявляем себя и развиваемся в этих направлениях, настолько гармонично складывается общая картина нашей судьбы, настолько счастливы мы сами, и люди, нас окружающие.
 					</p>
-					<a class="btn btn-primary btn-matrix" href="#" role="button">Я хочу узнать больше</a>
+					<a class="btn btn-primary btn-matrix" href="matrix.html" role="button">Я хочу узнать больше</a>
 					<div class="matrix-road"></div>
 					<div class="matrix-path"></div>
 				</div>
@@ -131,7 +130,10 @@
       							<div id="product4"></div>
     						</div>
     						<div class="carousel-item">
-      							
+      							<div id="product1"></div>
+      							<div id="product2"></div>
+      							<div id="product3"></div>
+      							<div id="product4"></div>
     						</div>
     						<div class="carousel-item">
       							
@@ -150,14 +152,18 @@
 					<div class="shop-path"></div>
 				</div>
 				<footer>
-					<div class="logo-footer"></div>
 					<small>© Любовь планете|LOVE TO PLANET 2016. Сайт разработан в студии "WebKarp"</small>
-				</footer>
-
-			<div class="clean"></div>
+				</footer>	
 		</div>
+		<div class="clean"></div>
 	</div>
 
-	
+	<!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+    <script src="script/jquery.viewportchecker.min.js"></script>
+	<script src="script/script.js"></script>	
+
 </body>
 </html>

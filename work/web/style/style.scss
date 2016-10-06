@@ -33,7 +33,7 @@ a {
 #content {
 	width: 80%;
 	float: right;
-	background-color: red;
+	background-color: $color-white;
 	min-height: 1000px;
 }
 .wrapper {
@@ -94,19 +94,19 @@ a {
 .nav-item:nth-child(6) {
 	border-bottom-color: $color-calendar;
 }
-.logo {
+#logo {
 	background: url(../img/logo.png) no-repeat;
 	-webkit-background-size: 34%;
 	background-size: 34%;
-	height: 85px;
-	width: 100%;
+	height: 86px;
+	width: 250px;
 	margin: 5px 0 20px 5px;
 }
-.logo span {
+#logo span {
 	width: 60%;
 	float: right;
 	font-size: 20pt;
-	color: #3953a4;
+	color: $color-logo;
 	font-weight: bolder;
 	line-height: 20pt;
 	margin: 15px auto;
@@ -119,16 +119,16 @@ a {
 	position: fixed;
 }
 .bunner1 {
-	background: url(../img/fon1.png) 0 -350% no-repeat;
-	-webkit-background-size: 100%;
-	background-size: 100%;
-	height: 500px;
+	background: url(../img/bunner/fon1.png) 50% 50% no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 700px;
 	background-attachment: fixed;
 
 }
 .wave {
 	position: relative;
-	top: -75px;
+	top: -74px;
 }
 .wave svg {
 	width: 100%;
@@ -153,10 +153,24 @@ a {
 	text-align: center;
 	
 }
-.matrix-block span {
+.matrix-block span  {
 	@extend .block-header;
 	color: $color-matrix;
 	margin-top: -65px;
+}
+.mtx-header span {
+	color: $color-matrix;
+}
+.mtx-header {
+	float: right;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+.mtx-header .matrix-path {
+	margin: 11px auto;
+	background-size: 100%;
+	width: 300px;
 }
 .game-block span {
 	@extend .block-header;
@@ -245,13 +259,16 @@ a {
 	height: 512px;
 	margin: 0 auto;
 }
-.matrix-path {
+.matrix-path, .matrix-path-trg {
 	background: url(../img/matrix-path.png) 50% no-repeat;
 	-webkit-background-size: 90%;
 	background-size: 90%;
 	width: 90%;
 	height: 20px;
 	margin: 32px auto 0;
+}
+.game-block {
+	box-shadow: 0px 11px 6px -7px #231F1F;
 }
 .game {
 	background: url(../img/game.png) 50% no-repeat;
@@ -268,7 +285,7 @@ a {
 	width: 100%;
 	height: 190px;
 	margin: -87px auto;
-	box-shadow: 0px 11px 6px -7px #231F1F;
+	
 }
 /*.wave2 {
 	position: relative;
@@ -277,9 +294,9 @@ a {
 }*/
 .bunner2 {
 	width: 100%;
-	background: url(../img/fon2.jpg) no-repeat;
-	-webkit-background-size: 100%;
-	background-size: 100%;
+	background: url(../img/bunner/fon2.png) 50% 50% no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 	height: 800px;
 	background-attachment: fixed;
 }
@@ -308,7 +325,7 @@ a {
 }
 .bunner3 {
 	width: 100%;
-	background: url(../img/fon3.png) no-repeat;
+	background: url(../img/bunner/fon3.png) 50% 50% no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 	height: 750px;
@@ -360,16 +377,13 @@ a {
 	height: 250px;
 	margin: 0 2%;
 	background-color: $color-white;
-	box-shadow: 0px 7px 14px -10px $color-shop;
+	/*box-shadow: 0px 7px 14px -10px $color-shop;*/
 }
 .carousel-control .icon-prev::before {
 	content: url(../img/left-arrow.png);
 }
 .carousel-control .icon-next::before {
 	content: url(../img/right-arrow.png);
-}
-.carousel-item {
-	height: 246px;
 }
 .carousel-item div {
 	width: calc(25% - 4px);
@@ -378,25 +392,13 @@ a {
 	height: 246px;
 }
 .carousel-control.left {
-    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
-    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
-    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
-    background-image: linear-gradient(to right,rgba(58, 83, 164, 0.5) 0,rgba(155, 40, 40, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-    background-repeat: repeat-x; 
+    width: 10%;
 }
 .carousel-control.right {
-    right: 0;
-    left: auto;
-    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
-    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
-    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
-    background-image: linear-gradient(to right,rgba(155, 40, 40, 0) 0,rgba(58, 83, 164, 0.5) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-    background-repeat: repeat-x;
+    width: 11%;
     }
 #product1 {
-	background: url(../img/product1.jpg) no-repeat;
+	background: url(../img/shop/product1.jpg) no-repeat;
 	-ms-background-position-x: 50%;
 	background-position-x: 50%;
 	-ms-background-position-y: 50%;
@@ -406,7 +408,7 @@ a {
 	background-size: contain;
 }
 #product2 {
-	background: url(../img/product2.jpg) 50% 50% $color-white no-repeat;
+	background: url(../img/shop/product2.jpg) 50% 50% $color-white no-repeat;
 	-ms-background-position-x: 50%;
 	background-position-x: 50%;
 	-ms-background-position-y: 50%;
@@ -416,7 +418,7 @@ a {
 	background-size: contain;
 }
 #product3 {
-	background: url(../img/product3.jpg) 50% 50% $color-white no-repeat;
+	background: url(../img/shop/product3.jpg) 50% 50% $color-white no-repeat;
 	-ms-background-position-x: 50%;
 	background-position-x: 50%;
 	-ms-background-position-y: 50%;
@@ -426,7 +428,7 @@ a {
 	background-size: contain;
 }
 #product4 {
-	background: url(../img/product4.jpg) 50% 50% $color-white no-repeat;
+	background: url(../img/shop/product4.jpg) 50% 50% $color-white no-repeat;
 	-ms-background-position-x: 50%;
 	background-position-x: 50%;
 	-ms-background-position-y: 50%;
@@ -444,26 +446,14 @@ a {
 	margin: -20px auto 28px;
 }
 footer {
-	background-color: $color-white;
 	width: 100%;
-}
-.logo-footer {
-	background: url(../img/logo.png) no-repeat;
-	margin: -28px 0%;
-	width: 24%;
-	height: 60px;
-	-webkit-background-size: 17%;
-	background-size: 17%;
-	background-position-y: 50%;
-	background-position-x: 100%;
-}
-
-small {
-	width: 100%;
-	display: block;
 	text-align: center;
-	line-height: 0;
-	font-family: $font-main;
+	position: absolute;
+	bottom: -55px;
+}
+small {
+	line-height: 50pt;
+	font-family: $font-decor;
 }
 .calendar {
 	margin: 16px 4%;
@@ -473,4 +463,277 @@ small {
 }
 .visible-animation {
 	opacity:1;
+}
+#load {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	background: url(../img/loader.gif);
+	width: 50px;
+	height: 50px;
+	text-indent: -9999em;
+}
+#fix-nav {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	list-style: none;
+	z-index: 9999; 
+}
+#fix-nav li {
+	width: 10px;
+	
+}
+#fix-nav li a {
+	display: block;
+	margin-left: -200px;
+	width: 210px;
+	color: $color-white;
+	height: 40px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	line-height: 28pt;
+	text-align: center;
+	&:hover {
+		text-decoration: none;
+	}
+}
+#fix-nav li:nth-child(2) a {
+	line-height: 15pt !important;
+}
+#fix-nav li:nth-child(1), #fix-nav li:nth-child(1) a {
+	background-color: $color-matrix;
+}
+#fix-nav li:nth-child(2), #fix-nav li:nth-child(2) a {
+	background-color: $color-games;
+}
+#fix-nav li:nth-child(3), #fix-nav li:nth-child(3) a {
+	background-color: $color-yoga;
+}
+#fix-nav li:nth-child(4), #fix-nav li:nth-child(4) a {
+	background-color: $color-aboutus;
+}
+#fix-nav li:nth-child(5), #fix-nav li:nth-child(5) a {
+	background-color: $color-shop;
+}
+#fix-nav li:nth-child(6), #fix-nav li:nth-child(6) a {
+	background-color: $color-calendar;
+}
+.matrix-tab {
+	width: 90%;
+	margin: 0 auto;
+}
+.mtx-item {
+	border-bottom: none;
+	line-height: normal !important;
+	margin: 0;
+	width: calc(100%/3.017);
+}
+.mtx-link:hover {
+	color: $color-matrix !important;
+}
+.nav-tabs {
+	border-bottom: 1px solid $color-matrix;
+}
+.nav-tabs .mtx-item.open .mtx-link:focus,
+.nav-tabs .mtx-item.open .mtx-link:hover,
+.nav-tabs .mtx-link.active,
+.nav-tabs .mtx-link.active:focus,
+.nav-tabs .mtx-link.active:hover, 
+.nav-tabs .mtx-item:hover
+.nav-tabs .mtx-link.active {
+	color: $color-matrix;
+	border-color: $color-matrix $color-matrix transparent;
+}
+.nav-tabs .mtx-link {
+	border-top-right-radius: 32px;
+	border-top-left-radius: 32px;
+}
+.fon-trg:nth-child(2) {
+	background: url(../img/bunner/fon-mtx1.jpg) no-repeat;
+	opacity: .3;
+	width: 100%;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 500px;
+}
+.fon-trg:nth-child(3) {
+	background: url(../img/bunner/fon-mtx2.jpg) no-repeat;
+	opacity: .3;
+	width: 100%;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 500px;
+}
+.fon-trg:nth-child(4) {
+	background: url(../img/bunner/fon-mtx3.jpg) no-repeat;
+	opacity: .3;
+	width: 100%;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 500px;
+}
+.matrix-path-trg {
+	width: 50%;
+	-moz-transform: rotate(180deg); /* Для Firefox */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    transform: rotate(180deg); 
+    margin: -16px auto 12px;
+}
+.stickers span {
+	font-family: "HelveticaNeueCyr";
+	text-align: center;
+	margin: 10px auto 10px;
+	display: block;
+}
+.stickers div {
+	position: absolute;
+	margin: 20px;
+	padding: 10px 5px;
+	background: $color-white;
+	z-index: 1;
+	width: 30%;
+	-webkit-transform:rotate(-2deg);
+       -moz-transform:rotate(-2deg);
+        -ms-transform:rotate(-2deg);
+         -o-transform:rotate(-2deg);
+            transform:rotate(-2deg);
+	-webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;;
+       -moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;;
+            box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;;
+}
+.stickers div:nth-child(3) {
+	top: 11%;
+	right: 10%;
+	-webkit-transform:rotate(1deg);
+       -moz-transform:rotate(1deg);
+        -ms-transform:rotate(1deg);
+         -o-transform:rotate(1deg);
+            transform:rotate(1deg);
+}
+.stickers div:nth-child(4) {
+	top: 36%;
+	left: 6%;
+	-webkit-transform:rotate(0deg);
+       -moz-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+         -o-transform:rotate(0deg);
+            transform:rotate(0deg);
+}
+.stickers div:nth-child(5) {
+	top: 33%;
+	right: 22%;
+	-webkit-transform:rotate(-1deg);
+       -moz-transform:rotate(-1deg);
+        -ms-transform:rotate(-1deg);
+         -o-transform:rotate(-1deg);
+            transform:rotate(-1deg);
+}
+.stickers div:nth-child(6) {
+	bottom: 7%;
+	left: 7%;
+	-webkit-transform:rotate(-2deg);
+       -moz-transform:rotate(-2deg);
+        -ms-transform:rotate(-2deg);
+         -o-transform:rotate(-2deg);
+            transform:rotate(-2deg);
+}
+.stickers div:nth-child(7) {
+	bottom: 34%;
+	right: 6%;
+	-webkit-transform:rotate(1deg);
+       -moz-transform:rotate(1deg);
+        -ms-transform:rotate(1deg);
+         -o-transform:rotate(1deg);
+            transform:rotate(1deg);
+}
+.stickers div:nth-child(8) {
+	bottom: 29%;
+	left: 8%;
+	-webkit-transform:rotate(1deg);
+       -moz-transform:rotate(1deg);
+        -ms-transform:rotate(1deg);
+         -o-transform:rotate(1deg);
+            transform:rotate(1deg);
+}
+.stickers div:nth-child(9) {
+	bottom: 10%;
+	right: 10%;
+	-webkit-transform:rotate(0deg);
+       -moz-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+         -o-transform:rotate(0deg);
+            transform:rotate(0deg);
+}
+.stickers div:nth-child(10) {
+	bottom: 115px;
+	left: 50%;
+}
+.stickers div h6 {
+	color: $color-matrix !important;
+	text-align: center;
+}
+.stickers div p {
+	font-size: 10pt;
+}
+.modal-content {
+	background-color: $color-logo;
+	border-radius: 0;
+	border: 1px solid $color-white;
+
+}
+.mtx-input {
+	width: 100%;
+}
+.mtx-input input {
+	margin-top: 12px;
+}
+.mtx-btn {
+	margin: 10px auto;
+	width: 100%;
+}
+.mtx-btn button {
+	margin: 6px auto;
+	&:hover {
+		color: $color-logo;
+		background: $color-white;
+	}
+	&:focus {
+		color: $color-logo;
+		background: $color-white;
+	}
+}
+#blocks-carousel {
+	width: 65%;
+	margin: 20px auto;
+	height: 493px;
+}
+#blocks-carousel .carousel-control {
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: repeat-x;
+}
+#collapseOne p, #collapseTwo p, #collapseThree p {
+	text-align: center;
+	font-family: $font-main;
+	margin: 0 15%;
+}
+.panel-heading {
+	text-align: center;
+	margin-top: 15px;
+}
+.panel-heading h4 a:hover,
+.panel-heading h4 a:active,
+.panel-heading h4 a:focus {
+	color:$color-matrix;
+	text-decoration: none;
+}
+.panel-heading h4 {
+	font-size: 14pt;
+}
+#trips span {
+
 }
