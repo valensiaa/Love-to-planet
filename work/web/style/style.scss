@@ -1,23 +1,17 @@
-$color-matrix: #FF0000;
-$color-games: #FF7F00;
-$color-yoga: #F6EC13;
-$color-aboutus: #68bd45;
-$color-shop: #3a53a4;
-$color-calendar: #4B0082;
-$color-other: #9400D3;
-$color-white: #fff;
-$color-text: #333333;
-$color-logo: #3953a4;
+@import 'pages/shop';
+@import 'pages/game';
+@import 'pages/matrix';
+@import 'pages/calendar';
+@import 'base/base';
 
-$font-decor: 'Segoe Print';
-$font-main: 'HelveticaNeueCyr';
+
 body {
 	margin: 0 auto;
 	position: relative;
 }
 * {
 	color: $color-text;
-	font-family: $font-decor;
+	font-family: $font-main;
 }
 a {
 	color: $color-text;
@@ -25,20 +19,20 @@ a {
 #left-block {
 	width: 20%;
 	background-color: $color-white;
-	float: left;
 	position: fixed;
-    height: 100%;
     box-shadow: 0px 0px 10px 1px #000000;
+	top: 0;
+	bottom: 0;
+	left: 0;
 }
 #content {
-	width: 80%;
-	float: right;
+	width: 100%;
 	background-color: $color-white;
-	min-height: 1000px;
+	overflow: hidden;
+	height: auto;
 }
 .wrapper {
 	width: 100%;
-	min-width: 1000px;
 	margin: 0 auto;
 }
 .clean {
@@ -46,6 +40,7 @@ a {
 }
 .nav {
 	text-align: center;	
+	
 }
 .nav-item:not(:nth-child(2)) {
 	min-height: 40px;
@@ -55,25 +50,40 @@ a {
 	border-bottom: 1px solid;
 	margin: 0 14%;
 }
+.nav-link {
+	font-family: $font-decor;
+}
 .nav-link:focus {
 	outline: none;
 }
-.nav .nav-item:nth-child(1):hover .nav-link {
+.nav-categories .nav-item:nth-child(1):hover .nav-link,
+.nav-categories .nav-item:nth-child(1) .nav-link.active,
+.nav-categories .nav-item:nth-child(1) .nav-link:focus {
 	color: $color-matrix;
 }
-.nav .nav-item:nth-child(2):hover .nav-link {
+.nav-categories .nav-item:nth-child(2):hover .nav-link,
+.nav-categories .nav-item:nth-child(2) .nav-link.active,
+.nav-categories .nav-item:nth-child(2) .nav-link:focus {
 	color: $color-games;
 }
-.nav .nav-item:nth-child(3):hover .nav-link {
+.nav-categories .nav-item:nth-child(3):hover .nav-link, 
+.nav-categories .nav-item:nth-child(3) .nav-link.active,
+.nav-categories .nav-item:nth-child(3) .nav-link:focus {
 	color: $color-yoga;
 }
-.nav .nav-item:nth-child(4):hover .nav-link {
+.nav-categories .nav-item:nth-child(4):hover .nav-link,
+.nav-categories .nav-item:nth-child(4) .nav-link.active,
+.nav-categories .nav-item:nth-child(4) .nav-link:focus {
 	color: $color-aboutus;
 }
-.nav .nav-item:nth-child(5):hover .nav-link {
+.nav-categories .nav-item:nth-child(5):hover .nav-link,
+.nav-categories .nav-item:nth-child(5) .nav-link.active,
+.nav-categories .nav-item:nth-child(5) .nav-link:focus {
 	color: $color-shop;
 }
-.nav .nav-item:nth-child(6):hover .nav-link {
+.nav-categories .nav-item:nth-child(6):hover .nav-link,
+.nav-categories .nav-item:nth-child(6) .nav-link.active,
+.nav-categories .nav-item:nth-child(6) .nav-link:focus {
 	color: $color-calendar;
 }
 .nav-item:nth-child(1) {
@@ -95,40 +105,54 @@ a {
 	border-bottom-color: $color-calendar;
 }
 #logo {
-	background: url(../img/logo.png) no-repeat;
-	-webkit-background-size: 34%;
-	background-size: 34%;
-	height: 86px;
-	width: 250px;
-	margin: 5px 0 20px 5px;
+	margin: 5px;
 }
 #logo span {
-	width: 60%;
 	float: right;
-	font-size: 20pt;
+	font-size: 17pt;
+	width: 52%;
 	color: $color-logo;
 	font-weight: bolder;
 	line-height: 20pt;
-	margin: 15px auto;
+	margin: 8% auto;
+	font-family: $font-decor;
+}
+#logo img {
+	width: 42%;
+	margin-right: 7px;
+}
+.secondary-logo {
+	width: 20% !important;
+
+}
+.secondary-top {
+	width: 100% !important;
+	margin-left: 0% !important;
+}
+.secondary-foot {
+	padding-left: 0% !important;
 }
 .fix-top {
-	width: 100%;
-	background-color: $color-white;
+	width: 80%;
+	background-color: #fff;
 	box-shadow: 12px 0px 10px 1px #000000;
 	height: 5px;
 	position: fixed;
+	margin-left: 20%;
+}
+#matrix, #game, #yoga, #shop, footer, .bunner3 {
+	padding-left: 20%;
 }
 .bunner1 {
-	background: url(../img/bunner/fon1.png) 50% 50% no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
-	height: 700px;
+	background: url(../img/bunner/fon1.png) 50% 0% no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	height: 514px;
 	background-attachment: fixed;
-
 }
 .wave {
 	position: relative;
-	top: -74px;
+	top: -68px;
 }
 .wave svg {
 	width: 100%;
@@ -147,11 +171,11 @@ a {
 	padding-top: 25px;
 }
 .block-header {
+	font-family: $font-decor !important;
 	font-size: 20pt;
 	margin-bottom: 20px;
 	display: block;
 	text-align: center;
-	
 }
 .matrix-block span  {
 	@extend .block-header;
@@ -160,8 +184,18 @@ a {
 }
 .mtx-header span {
 	color: $color-matrix;
+	font-family: $font-decor !important;
+}
+.game-header span {
+	color: $color-games;
+	font-family: $font-decor !important;
+}
+.shop-header span {
+	color: $color-shop;
+	font-family: $font-decor !important;
 }
 .mtx-header {
+	font-family: $font-decor !important;
 	float: right;
 	position: absolute;
 	top: 30px;
@@ -172,6 +206,7 @@ a {
 	background-size: 100%;
 	width: 300px;
 }
+
 .game-block span {
 	@extend .block-header;
 	color: $color-games;
@@ -197,7 +232,7 @@ a {
 	color: $color-text;
 	background-color: $color-white;
 	border-color: #e1e1e1;
-	margin: 28px 38%;
+	margin: 28px 35%;
 	display: block;
 	border-radius: 0px;
 }
@@ -206,6 +241,9 @@ a {
 }
 .outline-btn {
 	outline: none;
+}
+.btn {
+	font-family: $font-decor;
 }
 .btn-matrix:hover {
 	color:$color-matrix;
@@ -252,14 +290,14 @@ a {
 	@extend .outline-btn;
 }
 .matrix-road {
-	background: url(../img/matrix.png) 0 -154px no-repeat;
+	background: url(../img/matrix.png) 0 50% no-repeat;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	width: 80%;
 	height: 512px;
 	margin: 0 auto;
 }
-.matrix-path, .matrix-path-trg {
+.matrix-path {
 	background: url(../img/matrix-path.png) 50% no-repeat;
 	-webkit-background-size: 90%;
 	background-size: 90%;
@@ -340,7 +378,7 @@ a {
 }
 .aboutus-block p {
 	font-family: $font-main;
-	font-size: 16pt;
+	font-size: 15pt;
 	font-style: italic;
 	text-align: center;
 	margin: 0 10%;
@@ -448,8 +486,6 @@ a {
 footer {
 	width: 100%;
 	text-align: center;
-	position: absolute;
-	bottom: -55px;
 }
 small {
 	line-height: 50pt;
@@ -489,6 +525,7 @@ small {
 #fix-nav li a {
 	display: block;
 	margin-left: -200px;
+	font-family: $font-decor;
 	width: 210px;
 	color: $color-white;
 	height: 40px;
@@ -523,13 +560,12 @@ small {
 }
 .matrix-tab {
 	width: 90%;
-	margin: 0 auto;
+	margin: 45px auto;
 }
 .mtx-item {
 	border-bottom: none;
 	line-height: normal !important;
 	margin: 0;
-	width: calc(100%/3.017);
 }
 .mtx-link:hover {
 	color: $color-matrix !important;
@@ -551,189 +587,245 @@ small {
 	border-top-right-radius: 32px;
 	border-top-left-radius: 32px;
 }
-.fon-trg:nth-child(2) {
-	background: url(../img/bunner/fon-mtx1.jpg) no-repeat;
-	opacity: .3;
-	width: 100%;
-	-webkit-background-size: 100%;
-	background-size: 100%;
-	height: 500px;
-}
-.fon-trg:nth-child(3) {
-	background: url(../img/bunner/fon-mtx2.jpg) no-repeat;
-	opacity: .3;
-	width: 100%;
-	-webkit-background-size: 100%;
-	background-size: 100%;
-	height: 500px;
-}
-.fon-trg:nth-child(4) {
-	background: url(../img/bunner/fon-mtx3.jpg) no-repeat;
-	opacity: .3;
-	width: 100%;
-	-webkit-background-size: 100%;
-	background-size: 100%;
-	height: 500px;
-}
-.matrix-path-trg {
-	width: 50%;
-	-moz-transform: rotate(180deg); /* Для Firefox */
-    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
-    transform: rotate(180deg); 
-    margin: -16px auto 12px;
-}
-.stickers span {
-	font-family: "HelveticaNeueCyr";
-	text-align: center;
-	margin: 10px auto 10px;
-	display: block;
-}
-.stickers div {
-	position: absolute;
-	margin: 20px;
-	padding: 10px 5px;
-	background: $color-white;
-	z-index: 1;
-	width: 30%;
-	-webkit-transform:rotate(-2deg);
-       -moz-transform:rotate(-2deg);
-        -ms-transform:rotate(-2deg);
-         -o-transform:rotate(-2deg);
-            transform:rotate(-2deg);
-	-webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;;
-       -moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;;
-            box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;;
-}
-.stickers div:nth-child(3) {
-	top: 11%;
-	right: 10%;
-	-webkit-transform:rotate(1deg);
-       -moz-transform:rotate(1deg);
-        -ms-transform:rotate(1deg);
-         -o-transform:rotate(1deg);
-            transform:rotate(1deg);
-}
-.stickers div:nth-child(4) {
-	top: 36%;
-	left: 6%;
-	-webkit-transform:rotate(0deg);
-       -moz-transform:rotate(0deg);
-        -ms-transform:rotate(0deg);
-         -o-transform:rotate(0deg);
-            transform:rotate(0deg);
-}
-.stickers div:nth-child(5) {
-	top: 33%;
-	right: 22%;
-	-webkit-transform:rotate(-1deg);
-       -moz-transform:rotate(-1deg);
-        -ms-transform:rotate(-1deg);
-         -o-transform:rotate(-1deg);
-            transform:rotate(-1deg);
-}
-.stickers div:nth-child(6) {
-	bottom: 7%;
-	left: 7%;
-	-webkit-transform:rotate(-2deg);
-       -moz-transform:rotate(-2deg);
-        -ms-transform:rotate(-2deg);
-         -o-transform:rotate(-2deg);
-            transform:rotate(-2deg);
-}
-.stickers div:nth-child(7) {
-	bottom: 34%;
-	right: 6%;
-	-webkit-transform:rotate(1deg);
-       -moz-transform:rotate(1deg);
-        -ms-transform:rotate(1deg);
-         -o-transform:rotate(1deg);
-            transform:rotate(1deg);
-}
-.stickers div:nth-child(8) {
-	bottom: 29%;
-	left: 8%;
-	-webkit-transform:rotate(1deg);
-       -moz-transform:rotate(1deg);
-        -ms-transform:rotate(1deg);
-         -o-transform:rotate(1deg);
-            transform:rotate(1deg);
-}
-.stickers div:nth-child(9) {
-	bottom: 10%;
-	right: 10%;
-	-webkit-transform:rotate(0deg);
-       -moz-transform:rotate(0deg);
-        -ms-transform:rotate(0deg);
-         -o-transform:rotate(0deg);
-            transform:rotate(0deg);
-}
-.stickers div:nth-child(10) {
-	bottom: 115px;
-	left: 50%;
-}
-.stickers div h6 {
-	color: $color-matrix !important;
+#icons {
 	text-align: center;
 }
-.stickers div p {
-	font-size: 10pt;
+#icons-vert {
+	position: fixed;
+	bottom: 40%;
+	left: -5px;
+	z-index: 998;
 }
-.modal-content {
-	background-color: $color-logo;
-	border-radius: 0;
-	border: 1px solid $color-white;
+#mobile-menu {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+
+	.bunner1 {
+		height: 350px ;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	.wave {
+		top: -61px;
+	}
+	.btn-primary {
+		margin: 28px 33%;
+	}
+
+	#logo span {
+		font-size: 16pt;
+		line-height: 16pt;
+		margin: 13px auto;
+	}
+	#logo img {
+		width: 75px;
+	}
+	.nav-categories .nav-item {
+		font-size: 11pt;
+
+	}
+	.block-header,
+	.matrix-block span,
+	.game-block span,
+	.yoga-block span,
+	.aboutus-block span,
+	.shop-block span {
+		font-size: 16pt;
+	}
+	.matrix-road {
+		height: 322px;
+		
+	}
+	.aboutus-block p {
+		font-size: 12pt;
+	}
+
+ 
+}
+
+@media (max-width: 960px) {
+	#logo span {
+		font-size: 13pt;
+		line-height: 13pt;
+		margin: 13px auto;
+	}
+	#logo img {
+    	width: 60px;
+	}
 
 }
-.mtx-input {
-	width: 100%;
-}
-.mtx-input input {
-	margin-top: 12px;
-}
-.mtx-btn {
-	margin: 10px auto;
-	width: 100%;
-}
-.mtx-btn button {
-	margin: 6px auto;
-	&:hover {
-		color: $color-logo;
-		background: $color-white;
-	}
-	&:focus {
-		color: $color-logo;
-		background: $color-white;
-	}
-}
-#blocks-carousel {
-	width: 65%;
-	margin: 20px auto;
-	height: 493px;
-}
-#blocks-carousel .carousel-control {
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
-	background-image: -o-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
-	background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
-	background-repeat: repeat-x;
-}
-#collapseOne p, #collapseTwo p, #collapseThree p {
-	text-align: center;
-	font-family: $font-main;
-	margin: 0 15%;
-}
-.panel-heading {
-	text-align: center;
-	margin-top: 15px;
-}
-.panel-heading h4 a:hover,
-.panel-heading h4 a:active,
-.panel-heading h4 a:focus {
-	color:$color-matrix;
-	text-decoration: none;
-}
-.panel-heading h4 {
-	font-size: 14pt;
-}
-#trips span {
 
+@media (max-width: 768px) {
+
+	#left-block, .fix-top {
+		display: none;
+	}
+	#matrix, #game, #yoga, #shop, footer, .bunner3 {
+    	padding-left: 0%;
+	}
+	#mobile-menu {
+		display: block;
+		min-height: 75px;
+	}
+	#mobile-menu #logo {
+		height: 57px;
+		width: 19%;
+		margin: 5px 0 5px 5px;
+		float: left;
+	}
+	#logo img {
+    	width: 60px;
+	}
+	#logo span {
+    	display: none;
+	}
+	.wave {
+    	display: none;
+	}
+	.matrix-block span {
+		margin-top: 23px;
+	}
+	#mobile-menu-open {
+    	display: block;
+    	width: 50px;
+    	height: 50px;
+    	transition: all 1s;
+    	position: relative;
+    	float: right;
+    	margin: 9px 26px 0 0;
+    	outline: none;
+	}
+	#mobile-menu-open span {
+    	border: 2px solid $color-text;
+    	width: 35px;
+    	left: 12px;
+    	display: block;
+    	position: absolute;
+    	transition: all .8s;
+	}
+	#mobile-menu-open span.top-line {
+    	top: 16px;
+	}
+	#mobile-menu-open span.one, #mobile-menu-open span.two {
+    	top: 27px;
+	}
+	#mobile-menu-open span.bottom-line {
+    	top: 39px;
+	}
+	#mobile-menu-open.active .top-line {
+    	-webkit-transform: translate(0, -8px);
+    	transform: translate(0, -8px);
+    	-moz-transform: translate(0, -8px);
+    	opacity: 0;
+	}
+	#mobile-menu-open.active .one {
+    	transform: rotate(46deg);
+    	-moz-transform: rotate(46deg);
+    	-webkit-transform: rotate(46deg);
+	}
+	#mobile-menu-open.active .two {
+    	-webkit-transform: rotate(-46deg);
+    	transform: rotate(-46deg);
+    	-moz-transform: rotate(-46deg);
+	}
+	#mobile-menu-open.active .bottom-line {
+    	-webkit-transform: translate(0, 8px);
+    	transform: translate(0, 8px);
+    	-moz-transform: translate(0, 8px);
+    	opacity: 0;
+	}
+	#mobile-menu .menu-nav-mobile {
+		display: none;
+		padding: 60px;
+	}
+	.bunner1 {
+    	height: 0px;
+	}
+	#mobile-menu.open .menu-nav-mobile {
+		display: block;
+	}
+	.matrix-block p, .game-block p, .yoga-block p, .shop-block p {
+    	font-size: 11pt;
+	}
+	.btn-primary {
+   		margin: 22px 23%;
+   		font-size: 11pt;
+	}
+	.block-header, .matrix-block span,
+	.game-block span, .yoga-block span,
+	.aboutus-block span, .shop-block span,
+	.matrix-block span, .game-block span,
+	.yoga-block span, .aboutus-block span,
+	.shop-block span {
+    	font-size: 14pt;
+	}
+		.mtx-header .matrix-path, .shop-header .shop-path {
+    	margin: 4px auto;
+    	background-size: 91%;
+    	width: 215px;
+	}
+	small {
+		line-height: 20pt;
+		font-size: 70%;
+	}
+	.nav-item {
+    	min-height: 40px;
+   	 	line-height: 237%;
+	}
+
+
+
+	
+
+}
+@media (max-width: 647px) {
+	#blocks-carousel {
+    	width: 90%;
+	}
+	.carousel-control.right {
+    	width: 13%;
+	}
+
+}
+@media (max-width: 360px) {
+	.carousel-control.right {
+    	width: 24%;
+	}
+	.btn-primary {
+    	margin: 22px 21%;
+    }
+    .bunner2, .wave3, .wave4, .shop-path {
+    	display: none;
+    }
+    .matrix-road {
+    	height: 178px;
+	}
+	.matrix-path {
+    margin: 12px auto 0;
+    }
+    .game {
+    	height: 173px;
+	}
+	.game-path {
+    	height: 180px;
+   		margin: -86px auto;
+	}
+	.btn-primary {
+    	font-size: 10pt;
+	}
+	.youtube-video video {
+		width: 100%;
+	}
+	.matrix-block p, .game-block p, .yoga-block p, .shop-block p,
+	.aboutus-block p {
+    	font-size: 10pt;
+	}
+	.aboutus-block {
+    	top: 4%;
+	}
+	.bunner3 {
+		height: 330px;
+	}
 }
